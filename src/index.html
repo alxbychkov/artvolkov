@@ -8,45 +8,10 @@
     <title>artVolkov.ru</title>
 </head>
 <body>
-    <header class="header">
-        <div class="header-wrapper row">
-            <a href="/" class="logo col-12 col-md-3">
-                <img src="img/logo.svg" alt="logo" class="logo-img">
-            </a>
-            <nav class="navigation d-md-none d-lg-block col-md-6 ">
-                <ul class="nav-menu">
-                    <li class="nav-menu_item">
-                        <a href="#" class="nav-menu_link">О нас</a>
-                    </li>
-                    <li class="nav-menu_item">
-                        <a href="#" class="nav-menu_link">Портфолио</a>
-                    </li>
-                    <li class="nav-menu_item">
-                        <a href="#" class="nav-menu_link">Наши услуги</a>
-                    </li>
-                    <li class="nav-menu_item">
-                        <a href="#" class="nav-menu_link">Отзывы</a>
-                    </li>
-                    <li class="nav-menu_item">
-                        <a href="#" class="nav-menu_link">Контакты</a>
-                    </li>
-                </ul>
-            </nav>
-            <div class="header-contacts col-12 col-md-3">
-                <div class="contacts_item">
-                    <a href="tel:+74992167111" class="contacts_link __phone">+7 (499) 216-71-11</a>
-                    <a href="" class="contacts_link __callback">Заказать звонок</a>
-                </div>
-                <div class="contacts_item">
-                    <a href="tel:" class="contacts_link">Whatsapp</a>
-                    <a href="" class="contacts_link">Skype</a>
-                </div>
-            </div>
-        </div>
-    </header>
-    <div class="main">
-
-    </div>
+        @@include('templates/header.html')
+    <main class="main">
+        @@include('templates/first-screen.html')
+    </main>
     <footer class="footer"></footer>
     <script src="js/main.min.js"></script>
 </body>

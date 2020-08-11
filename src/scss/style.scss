@@ -1,16 +1,12 @@
 @import 'vars';
 @import 'fonts';
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body {}
-a{
-    text-decoration: none;
-    color: $text_color;
-}
-.header {
+body {
     font-family: 'Gotham Pro',sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -19,42 +15,9 @@ a{
     letter-spacing: -0.02em;
     color: $text_color;
 }
-.header-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 35px 40px;
-}
-.nav-menu {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style: none;
-}
-.nav-menu_item {
-    padding: 10px 15px;
-}
-.header-contacts {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-}
-.contacts_item {
-    display: flex;
-    flex-direction: column;
-}
-.contacts_item:first-of-type {
-    margin-right: 15px;
-}
-.contacts_link {
-    text-decoration: underline;
-}
-.contacts_link.__phone {
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 25px;
+a{
     text-decoration: none;
+    color: $text_color;
 }
-.contacts_link.__callback {
-    color: $blue_color;
-}
+@import 'header';
+@import 'first_screen';
