@@ -56,9 +56,13 @@
                 color: $blue_color;
                 transition: .5s;
                 background-color: #ffffff;
+                border-bottom: 1px solid rgba(255,255,255,0.2);
                 &:hover {
                     background-color: $blue_color;
                     color: #ffffff;
+                    &::after {
+                        opacity: 1;
+                    }
                 }
                 &::after{
                     content: url(../img/arrow_3.svg);
@@ -66,7 +70,9 @@
                     width: 18px;
                     height: 23px;
                     margin-left: 15px;
-                    margin-top: 1px;                   
+                    margin-top: 1px;
+                    opacity: 0;
+                    transition: .5s;                   
                 }
             }
             .box-btn {
@@ -93,7 +99,8 @@
                     position: absolute;
                     top: 50%;
                     transform: translateY(-50%);
-                    right: 26px;                
+                    right: 26px; 
+                    transition: .5s;               
                 }
                 &:hover {
                     &::after{

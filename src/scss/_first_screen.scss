@@ -107,6 +107,11 @@ h1.h1 {
     width: 50%;
     margin-left: 50%;
     overflow-y: auto;
+    &::-webkit-scrollbar { 
+        width: 0 !important;
+    }
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none;
 }
 .menu {
     width: 1250px;
