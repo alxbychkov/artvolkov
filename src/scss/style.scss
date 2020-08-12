@@ -19,5 +19,12 @@ a{
     text-decoration: none;
     color: $text_color;
 }
+.color-blue {
+    color: $blue_color;
+}
 @import 'header';
 @import 'first_screen';
+@import 'advantages';
+
+
+@import 'animation';

@@ -26,10 +26,19 @@
         align-items: center;
         justify-content: center;
         flex-direction: column;
-        a {
+        transition: .5s;
+        cursor: pointer;
+        img {
+            animation: trambling .4s ease-in-out infinite;
+            animation: pulse .3s ease-in-out infinite;
+        }
+        p {
             font-weight: 500;
             color: #ffffff;
             text-align: center;
+        }
+        &:hover {
+            background-color: $h_color;
         }
     }
 }
