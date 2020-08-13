@@ -13,6 +13,8 @@
     background: transparent;
     max-width: 1846px;
     margin: 0 auto;
+    overflow: hidden;
+    z-index: 2;
 }
 .header-wrapper {
     display: flex;
@@ -28,11 +30,18 @@
         width: 50%;    
     }
 }
-.navigation {
+.logo {
+    animation: showleft 2s linear;
+}
+.header-contacts {
+    animation: showright 2s linear;
+}
+.header .navigation {
     width: 50%;
     @media (max-width: 992px) {
         display: none;    
     }
+    animation: show 2s linear;
 }
 
 .nav-menu {

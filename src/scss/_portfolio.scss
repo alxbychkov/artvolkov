@@ -3,6 +3,8 @@
     background-color: $h_color;
     max-width: 1920px;
     margin: 0 auto;
+    position: relative;
+    overflow: hidden;
     .h2 {
         width: 100%;
         font-family: Igra Sans;
@@ -16,6 +18,8 @@
         margin-bottom: 123px;
     }
     .portfolio-block {
+        position: relative;
+        z-index: 2;
         display: flex;
         flex-wrap: wrap;
         .portfolio_item {
@@ -108,5 +112,19 @@
                 }
             }
         }
+    }
+    .obj_half {
+        position: absolute;
+        right: 45%;
+        top: 218px;
+        width: 200px;
+        height: 200px;
+        transform: rotate(45deg);
+        border-radius: 50%;
+        border: 50px solid transparent;
+        border-top: 50px solid $blue_color;
+        border-right: 50px solid $blue_color;
+        animation: spin3 6s linear;
+        // animation-delay: 4s;
     }
 }

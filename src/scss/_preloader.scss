@@ -1,0 +1,50 @@
+@import 'vars';
+.preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #ffffff;
+    z-index: 100;
+    transition: .5s;
+    .preloader_back {
+        // position: absolute;
+        left: 0;
+        top: 0;
+        width: 10%;
+        height: 100vh;
+        background: $blue_color;
+        .preloader_percentage.white {
+            color:#FFFFFF;
+            z-index: 1;
+        }    
+    }
+    .preloader_percentage {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        font-family: Igra Sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 150px;
+        line-height: 192px;
+        letter-spacing: -0.03em;
+        transform: translate(-50%, -50%);
+        &::before {
+            content: url(../img/arrow_1.svg);
+            width: 89px;
+            height: 89px;
+            position: absolute;
+            top: -22px;
+            left: -180px;
+        }
+    }
+    .preloader_percentage.blue {
+        color: $blue_color;
+    }
+    &.done {
+        opacity: 0;
+        visibility: hidden;
+    }
+}

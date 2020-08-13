@@ -6,6 +6,7 @@
     display: flex;
     flex-direction: column;
     position: relative;
+    overflow: hidden;
     .star {
         position: absolute;
         top: 59px;
@@ -111,5 +112,19 @@
                 }
             }
         }
+    }
+    .obj_half {
+        position: absolute;
+        right: 550px;
+        top: -100px;
+        width: 200px;
+        height: 200px;
+        transform: rotate(45deg);
+        border-radius: 50%;
+        border: 50px solid transparent;
+        border-top: 50px solid $blue_color;
+        border-right: 50px solid $blue_color;
+        animation: spin2 6s linear;
+        // animation-delay: 6s;
     }
 }
