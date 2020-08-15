@@ -16,7 +16,7 @@ document.querySelector(".first-screen .navigation")
   });
 document.addEventListener('DOMContentLoaded',()=>{
   const objs = document.querySelector('.first-screen')
-  showObj(objs,2000)
+  showObj(objs,0)
 })
 function showObj(name,time){
   const elements = name.querySelectorAll('.obj')
@@ -31,18 +31,18 @@ document.addEventListener('scroll',e=>{
   const advantages = document.querySelector('.advantages')
   let scroll = document.documentElement.scrollTop + window.innerHeight
   if (scroll > portfolio.offsetTop) {
-    showObj(portfolio,600)
+    showObj(portfolio,0)
   }
   if (scroll > advantages.offsetTop) {
-    showObj(advantages,2000)
+    showObj(advantages,0)
   }
 })
-preloader()
+// preloader()
 function preloader() {
   const images = document.images,
         images_total_count = images.length,
         preloader = document.querySelector('.preloader'),
-        perc_display = preloader.querySelectorAll('.preloader_percentage')
+        perc_display = preloader.querySelectorAll('.preloader_percentage .perc')
   let images_loaded_count = 0
   for(let i=0; i<images_total_count; i++) {
     let image_clone = new Image()
@@ -62,7 +62,7 @@ function preloader() {
   move()
   function move(){
     const back = document.querySelector('.preloader_back')
-    let width = 10
+    let width = 1
     let id = setInterval(()=>{
       if (width >= 100) {
         clearInterval(id)
@@ -70,11 +70,21 @@ function preloader() {
         width++
         back.style.width = `${width}%`
         perc_display.forEach(display=>{
-          display.innerHTML = `${width}%`
+          display.innerHTML = addZero(width)
         })
       }
-    }, 10);
+    }, 40);
   }
+}
+function addZero(number) {
+    let perc = Math.trunc(number / 10)
+    if (perc > 0 && perc < 10) return `0${number}`
+    switch (perc) {
+        case 0:
+            return `00${number}`
+        case 10:
+            return number    
+    }
 }
 
 

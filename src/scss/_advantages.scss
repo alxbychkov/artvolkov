@@ -1,5 +1,5 @@
 .advantages {
-    padding: 165px 15px 140px;
+    padding: 152px 3px 140px;
     max-width: 1920px;
     margin: 0 auto;
     width: 100%;
@@ -33,7 +33,7 @@
     .advantages-block {
         width: 50%;
         margin-left: 50%;
-        padding-right: 64px;
+        padding-right: 133px;
         position: relative;
         .example_link {
             position: absolute;
@@ -53,6 +53,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
+            margin-top: 16px;
             a {
                 font-weight: 500;
                 font-size: 18px;
@@ -115,15 +116,15 @@
     }
     .obj_half {
         position: absolute;
-        right: 550px;
-        top: -100px;
-        width: 200px;
-        height: 200px;
+        right: 25%;
+        top: -143px;
+        width: 288px;
+        height: 288px;
         transform: rotate(45deg);
         border-radius: 50%;
-        border: 50px solid transparent;
-        border-top: 50px solid $blue_color;
-        border-right: 50px solid $blue_color;
+        border: 70px solid transparent;
+        border-top: 70px solid $blue_color;
+        border-right: 70px solid $blue_color;
         animation: spin2 6s linear;
         // animation-delay: 6s;
     }

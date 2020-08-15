@@ -1,25 +1,27 @@
 @import 'vars';
 .first-screen {
     background-color: $background_color;
-    padding: 213px 0 60px;
+    padding: 199px 0 0px;
     overflow: hidden;
 }
 .wrapper {
-    max-width: 1200px;
+    max-width: 1299px;
     margin: 0 auto;
+    position: relative;
+    z-index: 2;
 }
 .first_title {
     position: relative;
     padding: 0 15px;
     .circle {
         position: absolute;
-        top: 50%;
-        left: 50%;
+        top: 57%;
+        left: 54%;
         width: 225px;
         height: 225px;
         border-radius: 50%;
         background-color: $blue_color;
-        margin: 25px;
+        margin: 3px 0 0 3px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -43,6 +45,7 @@
             font-weight: 500;
             color: #ffffff;
             text-align: center;
+            margin-bottom: 16px;
             span {
                 border-bottom: 1px solid rgba(255,255,255,.2);
             }
@@ -82,8 +85,9 @@ h1.h1 {
 }
 .first-block {
     width: 25%;
-    padding: 10px 0 10px 15px;
-    animation: show 2s linear;
+    padding: 0px 0 10px 17px;
+    margin-top: -15px;
+    // animation: show 2s linear;
     overflow: hidden;
     h5.block_title {
         font-family: Igra Sans;
@@ -98,7 +102,7 @@ h1.h1 {
         padding-right: 24px;
     }
     .block_pagination {
-        margin: 35px 0 110px;
+        margin: 37px 0 108px;
         height: 1px;
         border-top: 1px solid $text_color;
         width: 92%;
@@ -127,15 +131,19 @@ h1.h1 {
     }
 }
 .first-screen .navigation {
-    width: 50%;
-    margin-left: 50%;
+    width: 48%;
+    margin-left: 52%;
+    padding-left: 5px;
+    margin-top: -9px;
     overflow-y: auto;
+    position: relative;
+    z-index: 2;
     &::-webkit-scrollbar { 
         width: 0 !important;
     }
     -ms-overflow-style: none;
     overflow: -moz-scrollbars-none;
-    animation: showbottom 2s linear;
+    // animation: showbottom 2s linear;
 }
 .menu {
     width: 1250px;
@@ -145,7 +153,7 @@ h1.h1 {
     list-style: none;
 }
 .menu_item {
-    padding: 10px 15px;
+    padding: 0px 15px;
 }
 .menu_link {
     font-weight: 500;
@@ -162,8 +170,8 @@ h1.h1 {
         transform: rotate(90deg);
         position: absolute;
         top: 300px;
-        left: -100px;
-        animation: spin 6s linear;
+        left: -94px;
+        // animation: spin 6s linear;
         // animation-delay: 2s;
     }
     .obj_circle_big {
@@ -173,36 +181,36 @@ h1.h1 {
         border-bottom: 138px solid #ffffff;
         transform: rotate(90deg);
         position: absolute;
-        right: -180px;
-        top: 500px;
-        animation: spin 6s linear;
+        right: -176px;
+        top: 457px;
+        // animation: spin 6s linear;
         // animation-delay: 3s;
     }
     .obj_half {
         position: absolute;
-        right: 240px;
-        top: -595px;
+        right: 199px;
+        top: -574px;
         width: 903px;
         height: 903px;
         transform: rotate(45deg);
         border-radius: 50%;
-        border: 70px solid transparent;
-        border-top: 70px solid #ffffff;
-        border-right: 70px solid #ffffff;
-        animation: spin2 6s linear;
+        border: 122px solid transparent;
+        border-top: 122px solid #ffffff;
+        border-right: 122px solid #ffffff;
+        // animation: spin2 6s linear;
         // animation-delay: 4s;
     }
     .obj_rect {
         position: absolute;
-        bottom: 100px;
-        left: 480px;
+        bottom: -5%;
+        left: 20%;
         border-bottom: 70px solid #ffffff;
         border-left: 40px solid transparent;
         border-right: 25px solid transparent;
         height: 0;
         width: 500px;
         transform: rotate(150deg);
-        animation: grow 6s linear;
+        // animation: grow 6s linear;
         // animation-delay: 5s;
     }
 }
