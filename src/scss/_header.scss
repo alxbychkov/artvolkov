@@ -27,7 +27,7 @@
 .logo,
 .header-contacts {
     width: 25%;
-    padding-left: 12px;
+    // padding-left: 12px;
     @media (max-width: 992px) {
         width: 50%;    
     }
@@ -40,7 +40,7 @@
 }
 .header .navigation {
     width: 37%;
-    padding: 0px 13px 0 30px;
+    padding: 0px 6px 0 10px;
     margin-bottom: 6px;
     @media (max-width: 992px) {
         display: none;    
@@ -60,7 +60,19 @@
         padding-left: 0;
     }
     &:last-of-type {
-        padding-right: 0;
+        padding-right: 22px;
+    }
+    .nav-menu_link {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        display: block;
+        min-width: 94px;
+        text-align: center;
+        transition: .1s;
+        &:hover {
+            font-weight: 500;
+        }
     }
 }
 .header-contacts {

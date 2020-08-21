@@ -19,6 +19,21 @@
             transform: rotate(45deg);
         }
     }
+    .flight {
+        position: absolute;
+        top: 57px;
+        left: 40px;
+        width: 70px;
+        height: 70px;
+        background: $blue_color url(../img/arrow_2.svg);
+        border-radius: 50%;
+        background-position: 55% 45%;
+        background-repeat: no-repeat;
+        transition: .7s;
+        &:hover {
+            transform: rotate(-360deg);
+        }
+    }
     .h2 {
         width: 100%;
         font-family: Igra Sans;
