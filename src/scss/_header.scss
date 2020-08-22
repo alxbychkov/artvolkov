@@ -11,7 +11,8 @@
     left: 0;
     right: 0;
     background: transparent;
-    max-width: 1846px;
+    max-width: 1886px;
+    padding: 0 20px;
     margin: 0 auto;
     overflow: hidden;
     z-index: 2;
@@ -23,26 +24,38 @@
     // padding: 35px 40px;
     padding: 35px 0;
     margin: 0;
+    @media (max-width: 1170px) {
+        padding-bottom: 24px;
+        border-bottom: 2px solid #000000;    
+    }
+    @media screen and (max-width: 768px){
+        align-items: flex-start;
+    }
 }
 .logo,
 .header-contacts {
     width: 25%;
     // padding-left: 12px;
-    @media (max-width: 992px) {
+    @media (max-width: 1170px) {
         width: 50%;    
     }
 }
 .logo {
     // animation: showleft 2s linear;
+    .logo-img {
+        @media screen and (max-width: 768px) {
+        width: 192px;
+        }
+    }
 }
 .header-contacts {
     // animation: showright 2s linear;
 }
 .header .navigation {
-    width: 37%;
+    width: 50%;
     padding: 0px 6px 0 10px;
     margin-bottom: 6px;
-    @media (max-width: 992px) {
+    @media (max-width: 1170px) {
         display: none;    
     }
     // animation: show 2s linear;
@@ -51,16 +64,21 @@
 .nav-menu {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     list-style: none;
 }
 .nav-menu_item {
     padding: 10px 15px;
+    margin-right: 13px;
+    @media screen and (max-width:1430px) {
+        margin-right: 0;
+    }
     &:first-of-type {
         padding-left: 0;
     }
     &:last-of-type {
-        padding-right: 22px;
+        padding-right: 18px;
+        margin-right: 0;
     }
     .nav-menu_link {
         font-weight: 400;
@@ -73,12 +91,18 @@
         &:hover {
             font-weight: 500;
         }
+        @media screen and (max-width:1320px) {
+            min-width: 0;
+        }
     }
 }
 .header-contacts {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+    @media screen and (max-width: 768px){
+        display: none;
+    }
 }
 .contacts_item {
     display: flex;
@@ -98,4 +122,29 @@
 }
 .contacts_link.__callback {
     color: $blue_color;
+}
+.burger {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 35px;
+    cursor: pointer;
+    .line {
+        width: 40px;
+        height: 2px;
+        background-color: #121212;
+        margin-bottom: 6px;
+    }
+    .line:last-of-type {
+        width: 24px;
+        margin-left: auto;
+        margin-bottom: 0;
+    }
+    @media screen and (max-width: 1170px){
+        display: flex;
+    }
+    @media screen and (max-width: 768px){
+        padding-top: 10px;
+    }
 }
