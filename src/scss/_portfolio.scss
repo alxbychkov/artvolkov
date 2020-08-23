@@ -5,6 +5,9 @@
     margin: 0 auto;
     position: relative;
     overflow: hidden;
+    @media screen and (max-width: 1200px){
+        padding-top: 33px;
+    }
     .h2 {
         width: 100%;
         font-family: Igra Sans;
@@ -12,10 +15,26 @@
         font-weight: normal;
         font-size: 65px;
         line-height: 75px;
+        font-size: calc(1.875rem + 35 * (100vw - 320px) / 1526);
+        line-height: calc(1.875rem + 10px + 35 * (100vw - 320px) / 1526);
         letter-spacing: -0.03em;
         color: #ffffff;
         padding-left: 319px;
         margin-bottom: 123px;
+        @media screen and (min-width:1900px) {
+            font-size: 65px;
+            line-height: 75px;
+        }
+        @media screen and (max-width: 1200px){
+            width: 68%;
+            margin: 0 auto 26px;
+            padding-left: 0;
+        }
+        @media screen and (max-width: 768px){
+            width: 100%;
+            padding: 0 20px;
+            margin-bottom: 26px;
+        }
     }
     .portfolio-block {
         position: relative;
@@ -24,7 +43,8 @@
         flex-wrap: wrap;
         .portfolio_item {
             width: calc(100%/3);
-            min-height: 530px;
+            // min-height: 530px;
+            height: 28vw;
             padding: 67px 40px 40px;
             background-repeat: no-repeat;
             background-size: cover;
@@ -34,17 +54,57 @@
             align-items: flex-start;
             color: #ffffff;
             position: relative;
-            transition: .5s;
+            transition: opacity .5s;
+            overflow: hidden;
+            @media screen and (max-width: 1200px){
+                width: 50%;
+                min-height: 300px;
+                height: 100%;
+            }
+            @media screen and (max-width: 768px){
+                width: 100%;
+                min-height: 265px;
+                padding: 16px 20px 25px;
+            }
+            .portfolio_img {
+                max-width: 100%;
+                width: 100%;
+                height: auto;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: -1;
+                opacity: .8;
+                height: 28vw;
+                @media screen and (max-width: 1200px){
+                    height: auto;
+                }
+                @media screen and (max-width: 768px){
+                    min-height: 265px;
+                }
+            }
             .portfolio_case {
                 font-weight: 500;
                 font-size: 18px;
                 line-height: 25px;
+                @media screen and (max-width: 768px){
+                    font-style: 14px;
+                }
             }
             .portfolio_title {
                 font-weight: bold;
                 font-size: 35px;
                 line-height: 40px;
                 margin-top: 4px;
+                @media screen and (max-width: 1200px){
+                    font-size: 30px;
+                    line-height: 35px;
+                }
+                @media screen and (max-width: 768px){
+                    font-size: 25px;
+                    line-height: 30px;
+                    margin-top: 8px;
+                }
             }
             .porfolio-links {
                 margin-top: auto;
@@ -60,9 +120,18 @@
                     font-weight: 500;
                     font-size: 14px;
                     color: $blue_color;
+                    @media screen and (max-width: 768px){
+                        width: 100px;
+                        height: 30px;
+                        font-size: 12px;
+                        line-height: 18px;
+                    }
                 }
                 .portfolio_link:not(:last-of-type) {
                     margin-right: 15px;
+                    @media screen and (max-width: 768px){
+                        margin-right: 10px;
+                    }
                 }
             }
             .overlay {
@@ -126,5 +195,8 @@
         border-right: 50px solid $blue_color;
         animation: spin3 6s linear;
         // animation-delay: 4s;
+        @media screen and (max-width: 1200px){
+            display: none;
+        }
     }
 }
